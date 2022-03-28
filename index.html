@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+    <script src="./js/anime.js" defer></script>
+    <script src="./js/input-animation.js" defer></script>
+    <title>Estoque</title>
+</head>
+<body>
+    <main>
+        <form id="form-add-item">
+            <div class="container-inputs">
+                <input type="text" name="input-nome" id="input-nome" class="input-main-form">
+                <label for="input-nome" class="label-main-form">Nome do Produto:</label>
+            </div>
+            <div class="container-inputs">
+                <input type="text" name="input-quantidade" id="input-quantidade" class="input-main-form">
+                <label for="input-quantidade" class="label-main-form">Quantidade:</label>
+            </div>
+            <div class="container-inputs">
+                <input type="text" name="input-preco" id="input-preco" class="input-main-form">
+                <label for="input-preco" class="label-main-form">Preço:</label>
+            </div>
+            <div class="container-botoes-crud">
+                <input type="submit" value="Adicionar" class="btn" id="btn-adicionar">
+                <input type="button" value="Pesquisar" class="btn" id="btn-pesquisar"/>
+                <input type="button" value="Editar" class="btn" id="btn-editar"/>
+                <input type="button" value="Vender" class="btn" id="btn-vender"/>
+            </div>
+        </form>
+        <div class="tabela-output">
+            <table>
+                <tr>
+                    <th>Nome:</th>
+                    <th>Quantidade:</th>
+                    <th>Preço:</th>
+                </tr>
+            </table>
+            <table id="tabela-output">
+            </table>
+        </div>
+    </main>
+    <div id="resultado-pesquisa" class="resultado-pesquisa">
+        <div class="fechar-modal" id="fechar-modal"></div>
+        <div class="tabela-output-pesquisa">
+            
+        </div>
+    </div>
+    <div id="resultado-vender" class="resultado-vender">
+        <div class="fechar-modal" id="fechar-modal-vender"></div>
+        <div class="tabela-output-venda">
+            
+        </div>
+    </div>
+</body>
+</html>

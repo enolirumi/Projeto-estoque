@@ -1,0 +1,245 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c1c1c;
+    color: white;
+    padding-top: 150px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    border: white solid 2px;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 150px;
+}
+
+.container-botoes-crud{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.btn{
+    width: 20%;
+    height: 35px;
+    background-color: gray;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.8s ease;
+    color: black;
+}
+
+.btn:hover{
+    transform: scale(1.1);
+    background-color: rgb(206, 206, 206);
+}
+
+#form-add-item{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.container-inputs{
+    position: relative;
+    width: 100%;
+    margin: 20px 0;
+}
+
+input{
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border-bottom: gray solid 2px;
+    color: white;
+    outline: none;
+}
+
+.label-main-form{
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 20px;
+    transition: 0.8s ease;
+    pointer-events: none;
+}
+
+input:focus ~ label{
+    top: -25px;
+    font-size: 18px;
+}
+
+.label-main-form-fixed{
+    top: -25px;
+    font-size: 18px;
+}
+
+.tabela-output{
+    margin-top: 40px;
+    width: 100%;
+    height: 400px;
+    border: white solid 2px;
+    border-radius: 15px;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.resultado-pesquisa{
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    background-color: gray;
+    border-radius: 15px;
+    z-index: 98;
+    transition: 0.8s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.resultado-pesquisa-open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50%;
+    position: fixed;
+    z-index: 98;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: gray;
+    border: white solid 4px;
+    overflow-y: scroll;
+}
+
+.fechar-modal{
+    position: absolute;
+    border-top-right-radius: 10px;
+    top: 0;
+    left: 100%;
+    width: 4%;
+    height: 10%;
+    background-color: red;
+    z-index: 99;
+    transform: translateX(-100%);
+    cursor: pointer;
+}
+
+.fechar-modal::before{
+    content: '';
+    
+    position: absolute;
+    top: 45%;
+    left: 15%;
+
+    width: 70%;
+    height: 10%;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    transform: rotate(225deg);
+}
+
+.fechar-modal::after{
+    content: '';
+
+    position: absolute;
+    top: 45%;
+    left: 15%;
+
+    width: 70%;
+    height: 10%;
+
+    background-color: white;
+
+    border-radius: 20px;
+
+    transform: rotate(-225deg);
+}
+
+.tabela-output-pesquisa{
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    border-radius: 10px;
+}
+
+table{
+    width: 100%;
+    padding: 10px;
+}
+
+tr{
+    height: 40px;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+th{
+    width: 33%;
+    height: 60px;
+    border: white solid;
+}
+
+td{
+    width: 33%;
+    height: 60px;
+    border: white solid;
+    text-align: center;
+    transform: translateY(-5%);
+    text-transform: capitalize;
+}
+
+.resultado-vender{
+    z-index: 99;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 0;
+    height: 0;
+    background-color: gray;
+    border-radius: 15px;
+    z-index: 98;
+    transition: 0.8s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.resultado-vender-open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 50%;
+    position: fixed;
+    z-index: 98;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: gray;
+    border: white solid 4px;
+    overflow-y: scroll;
+}
